@@ -1,0 +1,9 @@
+<section>
+  <form (submit)="addPost($event)">
+    <label>Title</label>
+    <input name="title" type="text" placeholder="Post Title" [(ngModel)]="title" />
+    <label>Body</label>
+    <textarea name="body" [(ngModel)]="body"></textarea>
+    <button>Add Post</button>
+  </form>
+</section>

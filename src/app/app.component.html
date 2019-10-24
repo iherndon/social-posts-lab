@@ -1,0 +1,16 @@
+<button (click)="showForm()">New Post</button>
+
+<h1 [ngClass]="classList">Blog</h1>
+
+<post-form 
+  *ngIf="formVisible" 
+  (submitted)="onSubmit($event)">
+</post-form>
+
+<div>
+  <single-post
+    *ngFor="let post of posts; let i = index"
+    [title]="post.title"
+    [body]="post.body"
+  ></single-post>
+</div>
